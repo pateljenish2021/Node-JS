@@ -22,7 +22,6 @@ ports.forEach((port, index) => {
 
 // Using process signal event SIGINT to shutdown one server
 process.on('SIGINT', () => {
-    console.log('\nStopping Server 1 (Port 8000)...');
     servers[0].close(() => {
         console.log('Server 1 stopped.');
     });
